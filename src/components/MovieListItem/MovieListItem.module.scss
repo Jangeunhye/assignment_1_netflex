@@ -1,0 +1,15 @@
+.link {
+  text-decoration: none;
+}
+.titleBox {
+  display: flex;
+  .title {
+    color: white;
+  }
+
+  .likeButton {
+    background-color: transparent;
+    border: none;
+    font-size: 1.7rem;
+  }
+}

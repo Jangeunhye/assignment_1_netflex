@@ -1,0 +1,45 @@
+.container {
+  height: 100%;
+  color: white;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.title {
+  margin: 0;
+}
+
+.poster {
+  width: 18rem;
+}
+
+.genres {
+  list-style: none;
+  padding: 0;
+}
+
+.right {
+  padding-left: 2rem;
+  width: 44rem;
+  font-size: 1.3rem;
+}
+
+.genres {
+  display: flex;
+  gap: 1rem;
+}
+.genre {
+  border: 1px solid white;
+  padding: 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+}
+
+.rate {
+  margin-right: 1rem;
+}

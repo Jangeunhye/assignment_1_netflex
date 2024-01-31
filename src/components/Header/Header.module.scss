@@ -1,0 +1,27 @@
+.header {
+  height: 144px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+
+  .logo {
+    margin: 0;
+    color: red;
+    font-size: 3rem;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  nav > ul {
+    list-style: none;
+    padding-left: 0;
+    a,
+    li {
+      color: white;
+      text-decoration: none;
+      font-size: 21px;
+      font-weight: 700;
+    }
+  }
+}
