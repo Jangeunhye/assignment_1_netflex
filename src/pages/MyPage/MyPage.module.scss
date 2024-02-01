@@ -1,0 +1,42 @@
+.wrapper {
+  .container {
+    .form {
+      h2 {
+        font-size: 1.8rem;
+      }
+      padding-left: 32px;
+
+      .label {
+        display: none;
+      }
+      .nickName {
+        width: 20rem;
+        height: 2.4rem;
+      }
+      .updateButton {
+        margin-left: 2rem;
+        width: 5rem;
+        color: white;
+        padding: 0.6rem;
+        background-color: red;
+        border: none;
+        border-radius: 7px;
+        &:hover {
+          opacity: 0.7;
+          cursor: pointer;
+        }
+      }
+    }
+    ul {
+      padding: 0;
+    }
+  }
+
+  .logOutResult {
+    height: 100%;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 15rem;
+    opacity: 0.5;
+  }
+}

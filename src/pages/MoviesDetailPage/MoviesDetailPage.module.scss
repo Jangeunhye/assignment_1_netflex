@@ -1,16 +1,18 @@
 .container {
-  height: 100%;
   color: white;
   padding-left: 2rem;
   display: flex;
   justify-content: center;
+  min-height: 100%;
+  align-items: center;
+  margin-top: 3rem;
 }
 .title {
   margin: 0;
 }
 
 .poster {
-  width: 18rem;
+  height: 32rem;
 }
 
 .genres {
@@ -22,6 +24,12 @@
   padding-left: 2rem;
   width: 44rem;
   font-size: 1.3rem;
+}
+.top {
+  display: flex;
+  .title {
+    margin-right: 0.9rem;
+  }
 }
 
 .genres {
@@ -35,11 +43,16 @@
   font-size: 0.9rem;
 }
 
-.top {
+.middle {
   display: flex;
   align-items: center;
+  margin-bottom: 2.7rem;
 }
 
 .rate {
   margin-right: 1rem;
+  font-size: 1.5rem;
+}
+.overview {
+  line-height: 2.4rem;
 }

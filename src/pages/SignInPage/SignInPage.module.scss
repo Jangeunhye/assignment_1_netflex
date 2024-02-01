@@ -1,9 +1,19 @@
+.container {
+  height: 100%;
+}
 .form {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 500px;
+  height: 100%;
+  justify-content: center;
+  margin-top: 8rem;
+}
+.title {
+  font-size: 2.2rem;
+  margin: 0 0 1.6rem 0;
 }
 
 .input {
@@ -15,4 +25,14 @@
 
 .button {
   height: 52px;
+  margin-top: 1rem;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 7px;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 }

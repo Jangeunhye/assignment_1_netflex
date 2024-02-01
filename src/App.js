@@ -3,7 +3,7 @@ import HomePage from "./pages/HomePage";
 import SignInPage from "./pages/SignInPage";
 import DefaultLayout from "./layouts/DefaultLayout/DefaultLayout";
 import styles from "./App.module.scss";
-import MoviesDetailPage from "./components/MoviesDetailPage";
+import MoviesDetailPage from "./pages/MoviesDetailPage";
 import { AuthProvider } from "./contexts/auth.context";
 import MyPage from "./pages/MyPage";
 import { ProfileProvider } from "./contexts/profile.context";

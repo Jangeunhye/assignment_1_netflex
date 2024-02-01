@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import styles from "./SignInPage.module.scss";
 import { useAuth } from "../../contexts/auth.context";
 import { useNavigate } from "react-router-dom";
@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 function SignInPage() {
   const navigate = useNavigate();
 
-  const { isLoggedIn, signIn } = useAuth();
+  const { signIn } = useAuth();
 
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -17,6 +17,7 @@ function SignInPage() {
     }
     if (username === "udemy" && password === "udemy") {
       signIn();
+      navigate("/");
     } else {
       return alert("아이디 또는 비밀번호가 잘못되었습니다.");
     }
@@ -24,29 +25,26 @@ function SignInPage() {
 
   return (
     <div className={styles.container}>
-      {isLoggedIn ? (
-        navigate("/")
-      ) : (
-        <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUserName(e.target.value)}
-            placeholder="아이디를 입력해주세요"
-            className={styles.input}
-          />
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="비밀번호를 입력해주세요"
-            className={styles.input}
-          />
-          <button className={styles.button} onClick={handleClickSignIn}>
-            로그인하기
-          </button>
-        </form>
-      )}
+      <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+        <h2 className={styles.title}>로그인</h2>
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => setUserName(e.target.value)}
+          placeholder="아이디를 입력해주세요"
+          className={styles.input}
+        />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="비밀번호를 입력해주세요"
+          className={styles.input}
+        />
+        <button className={styles.button} onClick={handleClickSignIn}>
+          로그인하기
+        </button>
+      </form>
     </div>
   );
 }

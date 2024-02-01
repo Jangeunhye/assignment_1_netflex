@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useProfile } from "../../contexts/profile.context";
 import { useAuth } from "../../contexts/auth.context";
+import styles from "./LikeButton.module.scss";
+import whiteHeart from "../../assets/images/흰하트.png";
+import pinkHeart from "../../assets/images/핑크하트.png";
 
 function LikeButton({ movie }) {
   const { isLoggedIn } = useAuth();
@@ -20,8 +23,12 @@ function LikeButton({ movie }) {
   return (
     <div>
       {isLoggedIn ? (
-        <button onClick={handleClickLikedButton}>
-          {isLiked ? "취소" : "찜"}
+        <button className={styles.likeButton} onClick={handleClickLikedButton}>
+          {isLiked ? (
+            <img className={styles.heart} src={pinkHeart} alt="핑크 하트" />
+          ) : (
+            <img className={styles.heart} src={whiteHeart} alt="흰 하트" />
+          )}
         </button>
       ) : null}
     </div>

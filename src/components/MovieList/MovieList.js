@@ -10,9 +10,8 @@ function MovieList({ title, movies }) {
       <h2 className={styles.title}>{title}</h2>
       <ul className={styles.movieList}>
         {movies.map((movie) => (
-          <li key={movie.id}>
+          <li className={styles.bottom} key={movie.id}>
             <Movie movie={movie} />
-            <LikeButton movie={movie} />
           </li>
         ))}
       </ul>

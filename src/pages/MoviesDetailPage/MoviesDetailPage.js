@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./MoviesDetailPage.module.scss";
 import api from "../../api/api";
+import LikeButton from "../../components/LikeButton/LikeButton";
 
-import LikeButton from "../LikeButton/LikeButton";
 function MoviesDetailPage() {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
@@ -22,10 +22,13 @@ function MoviesDetailPage() {
         src={`${origin}${movie.poster_path}`}
         alt="poster"
       />
-      <LikeButton movie={movie} />
       <div className={styles.right}>
-        <h1 className={styles.title}>{movie.title}</h1>
         <div className={styles.top}>
+          <h1 className={styles.title}>{movie.title}</h1>
+          <LikeButton movie={movie} />
+        </div>
+
+        <div className={styles.middle}>
           <div className={styles.rate}>⭐{movie.vote_average}</div>
           <ul className={styles.genres}>
             {movie.genres.map((genre) => (

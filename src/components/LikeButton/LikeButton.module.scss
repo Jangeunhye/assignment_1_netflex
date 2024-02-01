@@ -1,0 +1,14 @@
+.likeButton {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+}
+.heart {
+  width: 30px;
+
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    content: url("../../assets/images/핑크하트.png");
+  }
+}

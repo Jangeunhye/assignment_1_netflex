@@ -16,12 +16,67 @@
   nav > ul {
     list-style: none;
     padding-left: 0;
-    a,
-    li {
+    a {
       color: white;
       text-decoration: none;
       font-size: 21px;
       font-weight: 700;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+
+    .nickName {
+      margin-right: 1.3rem;
+    }
+  }
+  .profileIcon {
+    width: 50px;
+  }
+
+  .dropdown:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .dropdownContent {
+    display: none;
+  }
+
+  .dropdown:hover .dropdownContent {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 20px;
+    width: 200px;
+    background-color: rgba(58, 58, 58, 0.57);
+
+    > .myPage,
+    .logOut {
+      padding: 0.8rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+
+      &:hover {
+        background-color: rgba(135, 129, 129, 0.2);
+      }
+    }
+
+    .logOut {
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-weight: 700;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
